@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>I Love You</title>
+  <style>
+    body { font-family: sans-serif; display: flex; height: 100vh; justify-content: center; align-items: center; background: #f3f4f6; }
+    .card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 300px; text-align: center; }
+    input { width: 100%; padding: 10px; margin-top: 10px; border-radius: 8px; border: 1px solid #ccc; }
+    button { margin-top: 10px; padding: 10px 15px; border: none; border-radius: 8px; background: #e11d48; color: white; font-weight: bold; }
+    #hasil { margin-top: 15px; font-size: 18px; font-weight: bold; color: #e11d48; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Masukkan Nama Kamu</h2>
+    <input id="nama" type="text" placeholder="Contoh: Risky">
+    <button onclick="sapa()">Kirim</button>
+    <p id="hasil"></p>
+  </div>
+
+  <script>
+    function sapa() {
+      const nama = document.getElementById("nama").value.trim();
+      if (nama) {
+        document.getElementById("hasil").innerText = `I Love You, ${nama} ❤️`;
+      }
+    }
+  </script>
+</body>
+</html>
